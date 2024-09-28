@@ -1,0 +1,232 @@
+Que 1. Create a function that takes a string (like "hello") and returns it in reverse order (like "olleh").Example: reverseString("hello") should return "olleh". 
+
+Ans 1. 
+
+function reverse(str){
+    return str.split('').reverse().join('');
+}
+
+console.log(reverse("hello"))
+
+
+
+
+Que 2.Write a function that takes an array of numbers and returns the largest number from that 
+array.Example: findLargest([1, 3, 2]) should return 3.
+
+Ans 2.
+
+function find(arr){
+    return Math.max(...arr);
+}
+let arr = [1,3,2]
+console.log(find(arr))
+
+
+
+
+Que 3. Implement a function that counts how many vowels (a, e, i, o, u) are present in a given 
+string.Example: countVowels("hello") should return 2 (the vowels are e and o). 
+
+Ans 3.
+
+function count(str){
+    let a=0;
+    for(let i of str){
+        if(i=='a' || i=='o' || i=='e' || i=='i' || i=='u'){
+            a++;
+        }
+    }
+    return a;
+}
+let str = "hello"
+console.log(count(str))
+
+
+
+
+Que 4.  Write a function that calculates the total sum of all numbers in an array. 
+Example: sumArray([1, 2, 3]) should return 6. 
+
+Ans 4.
+
+function sum(arr){
+    let a=0;
+    arr.map((ele)=>{
+        a+=ele
+    })
+    return a;
+}
+let arr = [1,2,3]
+console.log(sum(arr))
+
+
+
+
+Que 5. Create a function that takes an array and removes any duplicate values, returning a new 
+array with unique values.Example: removeDuplicates([1, 2, 2, 3]) should return [1, 2, 3]. 
+
+Ans 5.
+
+function dublicate(arr){
+    
+    return arr.filter((value, index) => arr.indexOf(value) === index)
+}
+let arr = [1,2,2,3]
+console.log(dublicate(arr))
+
+
+
+
+Que 6.Write a function that finds and returns the longest word in a given sentence. 
+Example: findLongestWord("The quick brown fox") should return "quick". 
+
+Ans 6.
+
+function solution(str){
+    
+    let a = str.split(' ');
+    a.sort((a,b)=>b.length - a.length)
+    return a[0]
+}
+let str = "The quick brown fox"
+console.log(solution(str))
+
+
+
+
+Que 7. : Implement a function that counts the occurrence of each character in a string and returns an 
+object with characters as keys and their counts as values. 
+Example: countCharacters("hello") should return {h: 1, e: 1, l: 2, o: 1}
+
+Ans 7.
+
+function solution(str){
+    
+    let word = str.toLowerCase().split('')
+    let obj = {}
+    for(let i of word){
+        if(obj[i]){
+            obj[i]++;
+        }else{
+            obj[i]=1;
+        }
+    }
+    return obj
+}
+let str = "hello"
+console.log(solution(str))
+
+
+
+
+Que 8. : Create a function that generates a random integer between two specified numbers 
+(inclusive).Example: randomInteger(1, 10) could return any number from 1 to 10. 
+
+Ans 8.
+
+function solution(max){
+    
+    let a = Math.floor(Math.random()*max)+1
+    return a;
+}
+let min = 1
+let max = 10
+console.log(solution(max))
+
+
+
+
+Que 9.  Write a function that identifies and returns all duplicate numbers from an array of integers. 
+Example: findDuplicates([1, 2, 2, 3, 4, 4]) should return [2, 4].
+
+Ans 9.
+
+function solution(arr){
+    
+    return arr.filter((value, index) => arr.indexOf(value) != index);
+}
+let arr = [1,2,2,3,4,4]
+console.log(solution(arr))
+
+
+
+
+Que 10.  Create a function that reverses the order of words in a given string. 
+Example: reverseWords("Hello world") should return "world Hello". 
+
+Ans 10.
+
+function solution(arr){
+    
+    return arr.split(' ').reverse().join(' ');
+}
+let arr = "Hello world"
+console.log(solution(arr))
+
+
+
+
+Que 11. : Write a function that combines two objects into one. If both objects have the same key, the 
+value from the second object should overwrite the first. 
+Example: mergeObjects({a: 1}, {a: 2, b: 3}) should return {a: 2, b: 3}
+
+Ans 11.
+
+function solution(obj1 , obj2){
+    
+    let obj = {...obj1, ...obj2}
+    return obj
+}
+
+let obj1 = {a:1}
+let obj2 = {a:2,b:3}
+console.log(solution(obj1,obj2))
+
+
+
+
+OPTIONAL QUESTINS
+
+Ans 1. -----> B
+
+Ans 2. -----> C
+
+Ans 3. -----> B
+
+Ans 4. ----->B
+
+Ans 5. ----->A
+
+Ans 6. ----->B
+
+Ans 7. ----->C
+
+Ans 8. ----->B
+
+Ans 9. ----->A
+
+Ans 10. ---->B
+
+Ans 11. ---->B
+
+Ans 12. ---->C
+
+Ans 13. ---->A
+
+Ans 14. ---->C
+
+Ans 15. ---->A
+
+Ans 16. ---->B
+
+Ans 17. ---->A
+
+Ans 18. ---->A
+
+Ans 19. ---->B
+
+Ans 20. ---->C
+
+
+
